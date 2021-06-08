@@ -9,10 +9,7 @@ import Register from './Register';
 const Routes = () => {
     return (
         <>
-            <Route exact path="/" render={()=> <Home/> }    />
-            <Route path="/movies"  render={()=> <Post />}  />  
-            <AuthRoute exact path="/login"  component={ Login }  />  
-            <AuthRoute exact path="/register" component={ Register }  />  
+       
             
         </>
     )
