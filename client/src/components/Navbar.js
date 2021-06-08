@@ -50,73 +50,7 @@ const Navbar = () => {
     const classes = useStyles();
     
 const navbarLayout = !user ? (
-  <BottomNavigation   className={classes.root}>
-      <BottomNavigationAction 
-                            label="Question"
-                            value="movies"
-                            icon={<AdbIcon />}
-                            className={classes.logo} 
-                            showLabel={true} />
-      <BottomNavigationAction 
-                            label="Movies" 
-                            icon={<MovieIcon />} 
-                            className={classes.icon}
-                            component={Link}
-                             to="/"
-    />
 
-  
-  <BottomNavigationAction  
-                            icon={<PersonIcon/>}
-                            className={classes.login}
-                            component={Link}
-                            to="/login" 
-                            label={<span>Login</span>}
-                            showLabel={true}/>
-      <BottomNavigationAction     
-                            icon={<PersonAddIcon/>}
-                            className={classes.register}  
-                            component={Link}
-                            to="/register" 
-                            label={<span>Rwgister</span>}
-                            showLabel={true} />
-  </BottomNavigation>
-  ) : (
-    <BottomNavigation  
-                        className={classes.root}>
-    <BottomNavigationAction 
-                          label="Movies" 
-                          value="movies" 
-                          icon={<AdbIcon />}
-                          className={classes.logo}/>
-    <BottomNavigationAction 
-                          label="Movies" 
-                          icon={<MovieIcon />} 
-                          className={classes.icon}
-                          component={Link}
-                           to="/"
-  />
-<BottomNavigationAction 
-                          label="Ask"
-                          icon={<AddIcon />}
-                          className={classes.icon}
-                          component={Link}
-                          to="/movies" />
-                        
-                         
-<BottomNavigationAction  
-                    
-                          className={classes.login}
-                          label={<span>{user.username}</span>}
-                          showLabel={true}
-                          />
-    <BottomNavigationAction     
-                          icon={<ExitToAppIcon />}
-                          className={classes.register}  
-                          label={<span>Logout</span>}
-                          showLabel={true}
-                          onClick={logout}
-                          />
 </BottomNavigation>
   )
 return navbarLayout;
